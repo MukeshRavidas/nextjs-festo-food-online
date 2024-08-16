@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav_link {
+        @apply relative text-xl w-fit block after:block after:content-[''] after:absolute
+        after:h-[3px] after:bg-yellow-400 text-white after:w-full after:scale-x-0
+        after:hover:scale-x-100 after:transition after:duration-300 after:origin-right
+
+    }
+}
+*:focus{
+    outline: none;
+}
+.main-page-banner,.restaurant-page-banner{
+    background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/watermarks/image/rDtN98Qoishumwih/burito-1_SB_PM.jpg");
+    background-color: rgb(0, 0, 0,0.5);
+    text-align: center;
+    background-blend-mode: multiply;
+    height: 250px;
+    width: 100%;
+    color: white;
+}
+.input-wraper{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: auto;
+    width: 60%;
+
+}
+.select-input{
+    height: 40px;
+    border: none;
+    width: 25%;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+    
+}
+.search-input{
+    height: 40px;
+    border: none;
+    width: 75%;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+}
+
+.location-list{
+    color: #000;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+    border: 1px solid #ccc;
+}
+.location-list li {
+    width: 182px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.restaurant-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.restaurant-wraper{
+    width: 48.5%;
+    height: 100px;
+    background-color: orange;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.restaurant-wraper .heading-wraper,.restaurant-wraper .address-wraper{
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+.restaurant-wraper h5{
+    margin-left: 15px;
+}
+.restaurant-wraper .address{
+    margin-left: 5px;
+}
+.restaurant-page-banner h1{
+    font-size: 65px;
+    margin-top: 89px;
+}
+
+.detail-wraper{
+    display: flex;
+    background-color: orange;
+}
+.detail-wraper h3{
+    width: 50%;
+}
+.food-item-wraper{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.food-item-wraper .list-item{
+    padding: 20px;
+    color: orange;
+    font-weight: bold;
+    border-bottom: 1px solid orange;
+    display: flex;
+    text-transform: capitalize;
+}
+.food-item-wraper .list-item button{
+    color: #fff;
+    order: none;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.food-item-wraper .list-item img{
+    width: 100px;
+    padding-right: 20px;
+}
+.food-item-wraper .list-item .description{
+    font-weight: lighter;
+}
+.list-item-block1{
+    width: 20%;
+}
+.list-item-block2{
+    width: 80%;
+}
+.list-item-block3{
+    width: 20%;
+}
+
+.total-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid orange;
+    padding-bottom: 20px;
+}
+.total-wraper .row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+.total-wraper .block-1{
+    width: 70%;
+}
+.total-wraper .block-2{
+    width: 30%;
+}
+.total-wraper .block-2 button{
+    padding: 10px 25px;
+    border: navajowhite;
+    background-color: orange;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-container{
+    display: flex;
+}
+.login-wraper{
+    height: 370px;
+    border: 1px solid #ccc;
+    margin: 50px;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+.signup-wraper{
+    height: 600px;
+    border: 1px solid #ccc;
+    margin: 50px;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+.myprofile-footer-wraper{
+    margin-top: 440px;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main-page-banner,
+    .restaurant-page-banner {
+        height: 200px;
+    }
+
+    .restaurant-page-banner h1 {
+        font-size: 45px;
+        margin-top: 60px;
+    }
+
+    .input-wraper {
+        width: 90%;
+    }
+
+    .select-input,
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .restaurant-wraper {
+        width: 100%;
+    }
+
+    .total-wraper .row {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .restaurant-wraper {
+        width: 100%;
+    }
+
+    .detail-wraper h3 {
+        width: 100%;
+    }
+
+    .total-wraper .row {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+    .restaurant-wraper {
+        width: 48%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+    .input-wraper {
+        width: 80%;
+    }
+
+    .restaurant-wraper {
+        width: 48%;
+    }
+}
