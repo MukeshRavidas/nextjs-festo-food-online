@@ -35,7 +35,8 @@ const Page = () => {
             <div className="mt-36">
                 <h1>My Order Lists</h1>
                 {
-                myOrders.map((item)=>(
+                  myOrders.length()>0?(
+                  myOrders.map((item)=>(
                     // eslint-disable-next-line react/jsx-key
                     <div className="restaurant-wraper">
                         <h4>Name:{item.data.name}</h4>
@@ -52,6 +53,10 @@ const Page = () => {
                         </div>
                     </div>
                 ))
+                )
+                :(  
+                    <h3>No orders found</h3>
+                 )
             }
             </div>
         </div>
